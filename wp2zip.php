@@ -59,7 +59,7 @@
 
 	header( "Content-Type: application/zip" );
 	header( "Content-Disposition: attachment; filename=\"" . $s_dst . ".zip\"" );
-	header( "Content-Length: " . filesize( $archive_file_name ) );
+	header( "Content-Length: " . filesize( $s_dst . ".zip" ) );
 	header( "Pragma: No-cache" );
 	header( "Expires: 0" );
 	readfile( $s_dst . ".zip" );
