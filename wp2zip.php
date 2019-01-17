@@ -109,7 +109,7 @@
 				{
 					$zip->addEmptyDir( str_replace( $s_src . "/", "", $s_file . "/" ) );
 				}
-				else if( is_file( $s_file )  &&  ( strpos( $s_file, $s_dst ) === FALSE ) ) // packa inte med sigsjälv....
+				else if( is_file( $s_file )  &&  ( strpos( $s_file, $s_dst ) === FALSE ) ) // Skip adding self...
 				{
 					$zip->addFromString( str_replace( $s_src . "/", "", $s_file ), file_get_contents( $s_file ) );
 				}
@@ -125,7 +125,6 @@
 
 		return true;
 	}
-
 
 
 	// Creates a MySQL dumpfile containing full SQL statements to rebuild all tables with data
