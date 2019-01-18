@@ -32,7 +32,7 @@
 		exit;
 	}
 
-	if( $s_mysql_host == ""  ||  $s_mysql_user == ""  ||  $s_mysql_pass == ""  ||  $s_mysql_db == "" )
+	if( DB_HOST == ""  ||  DB_USER == ""  ||  DB_PASSWORD == ""  ||  DB_NAME == "" )
 	{
 		print "Database connection information could not be read from wp-config.php.";
 		exit;
